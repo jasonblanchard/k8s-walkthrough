@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello
+  labels:
+    app: hello
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hello
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      name: hello
+      labels:
+        app: hello
+    spec:
+      containers:
+      - image: jasonblanchard/node-hello:830cb5cc2c49ff6f7947fd383653965a0941b323
+        name: hello
+        ports:
+          - containerPort: 8080
