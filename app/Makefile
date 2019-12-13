@@ -13,3 +13,4 @@ tag: build
 
 push: tag
 	docker push ${REMOTE_TAG}
+	docker push ${LOCAL_TAG}

@@ -16,7 +16,7 @@ spec:
         app: hello
     spec:
       containers:
-        - image: jasonblanchard/node-hello:90b6299d6b46938cab699e1f0c72c9420bbb2d10
+        - image: jasonblanchard/node-hello
           name: hello
           ports:
             - containerPort: 8080
