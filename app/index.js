@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 app.get('/', (req, res) => {
   const helloTo = process.env.HELLO_TO || 'world';
-  res.send(`Hellooooo ${helloTo}!`);
+  res.send(`Hello ${helloTo}!`);
 });
 
 app.listen(port, () => {
